@@ -10,6 +10,31 @@
 </head>
 
 <body>
+<header>
+  <h1 id="logo">Doggy Memory Game</h1>
+  <ul id="menu">
+    <li>
+      <button data-modal-target="#modal">How to play</button>
+    </li>
+    <li>
+      <button>Settings</button>
+    </li>
+  </ul>
+</header>
+<div class="modal" id="modal">
+  <div class="modal-header">
+  <div class="modal-title"> How to play</div>
+  <button data-close-button class="close-button">&times;</button>
+  </div>
+  <div class="modal-body">
+The player chooses a card and it automtically turns over.
+
+The player then selects another card and it turns over. If the two cards are a matching pair for example two of the same faces then they stay turned. The player is awarded another turn for making a match and goes again.
+
+If the cards are not a match they are turned back over.
+  </div>
+</div>
+<div id="overlay"></div>
   <section class="game">
     <div class="card" data-dog="1">
       <img class="front-face" src="images/beagle.png" alt="Beagle">
