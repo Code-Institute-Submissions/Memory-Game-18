@@ -61,11 +61,11 @@ header {
     grid-template: 30%;
 }
 
-/*Header styling */
+/*Header styling. */
 
 #logo {
     float: left;
-    font-size: 280%;
+    font-size: 200%;
 
 }
 
@@ -87,11 +87,12 @@ header {
   background-color: #4CAF50;
   border: none;
   color: white;
-  padding: 15px 32px;
+  padding: 10px 15px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;
+  font-size: 12px;
+  border-radius: 20px;
 }
 
 #nav:hover {
