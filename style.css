@@ -7,7 +7,6 @@
 
 body {
   height: 100vh;
-  display: flex;
   background: blue;
 }
 
@@ -55,22 +54,22 @@ body {
   transform: rotateY(180deg);
 }
 
+header {
+    display: grid;
+    grid-template: 30%;
+}
 
 #logo {
     float: left;
     font-size: 280%;
-    position: fixed;
-    left: 10px;
-    top: 10px;
+
 }
 
 #menu {
     font-size: 110%;
     list-style-type: none;
     letter-spacing: 4px;
-    position: fixed;
-    right: 10px;
-    top: 10px;
+
 
 }
 
