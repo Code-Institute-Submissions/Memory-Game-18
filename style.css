@@ -10,6 +10,8 @@ body {
   background: blue;
 }
 
+/*Game styling*/
+
 .game {
   width: 640px;
   height: 500px;
@@ -59,6 +61,8 @@ header {
     grid-template: 30%;
 }
 
+/*Header styling */
+
 #logo {
     float: left;
     font-size: 280%;
@@ -93,6 +97,8 @@ header {
 #nav:hover {
   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
+
+/* Modal styling*/
 
 .modal {
     position: fixed;

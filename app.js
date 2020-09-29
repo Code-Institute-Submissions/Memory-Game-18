@@ -1,3 +1,5 @@
+/*Game function*/
+
 const cards = document.querySelectorAll('.card');
 
 let hasFlippedCard = false;
@@ -58,6 +60,8 @@ card.style.order = randomPos;
 })();
 
 cards.forEach(card => card.addEventListener('click', flipCard));
+
+/*Modal function*/
 
 const openModalButtons = document.querySelectorAll('[data-modal-target]')
 const closeModalButtons = document.querySelectorAll('[data-close-button]')
