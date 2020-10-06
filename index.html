@@ -37,8 +37,20 @@ The player chooses a card and it automtically turns over. The player then select
   </div>
   <div class="modal-body">
 <ul>
-<li>Sound affects</li>
-<li>Background music</li>
+<li>Background music 
+<audio id="myAudio" src="sound/bgm.mp3" type="audio/mp3" preload="auto">
+</audio>
+<button><a onClick="togglePlay()">Click to turn on and off</a></button>
+</li>
+<ul>
+<li>Sound effects<li><hr>
+<input type="radio" id="fx-on" name="fx">
+<label for="fx-on">Sound effects on</label><br>
+<input type="radio" id="fx-off" name="fx">
+<label for="fx-off">Sound effects off</label><br>
+<input type="radio" id="comp-fx" name="fx">
+<label for="comp-fx">Game completion only</label> 
+</ul>
 </ul>
   </div>
 </div>

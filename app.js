@@ -61,6 +61,22 @@ card.style.order = randomPos;
 
 cards.forEach(card => card.addEventListener('click', flipCard));
 
+//BGM toggle function
+
+var myAudio = document.getElementById("myAudio");
+var isPlaying = false;
+
+function togglePlay() {
+  isPlaying ? myAudio.pause() : myAudio.play();
+};
+
+myAudio.onplaying = function() {
+  isPlaying = true;
+};
+myAudio.onpause = function() {
+  isPlaying = false;
+};
+
 /*Modal function*/
 
 const openModalButtons = document.querySelectorAll('[data-modal-target]')
