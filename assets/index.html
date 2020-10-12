@@ -5,66 +5,83 @@
       <title>Memory Game</title>
       <link rel="stylesheet" href="style.css">
       <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-      <!-- CSS only -->
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
    </head>
    <body>
-      <header>
-         <h1 id="logo">Doggy Memory Game</h1>
-         <ul id="menu">
-            <li>
-               <button data-modal-target="#modal" id="nav">How to play</button>
-            </li>
-            <li>
-               <button data-modal-target="#modal1" id="nav">Settings</button>
-            </li>
-         </ul>
-      </header>
-      <div class="modal" id="modal">
-         <div class="modal-header">
-            <div class="modal-title"> How to play</div>
-            <button data-close-button class="close-button">&times;</button>
-         </div>
-         <div class="modal-body">
-            The player chooses a card and it automtically turns over. The player then selects another card and it turns over. If the two cards are a matching pair for example two of the same faces then they stay turned. The player is awarded another turn for making a match and goes again. If the cards are not a match they are turned back over.
-         </div>
+   <div class="row">
+      <div class="col d-none d-sm-block">
       </div>
-      <div class="modal" id="modal3">
-         <div class="modal-header">
-            <div class="modal-title"> Congratulations</div>
+      <div class="col">
+         <h1 id="logo">Memory Game</h1>
          </div>
-         <div class="modal-body">
-            You have completed the game. Would you like to play again?
-            <button>Replay</button>
+         <div class="col">
+            <!-- Trigger the modal with a button -->
+               <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">How to play</button>
+               <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal1">Settings</button>
          </div>
+   </div>
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">How to play</h4>
       </div>
-      <div class="modal" id="modal1">
-         <div class="modal-header">
-            <div class="modal-title"> Settings</div>
-            <button data-close-button class="close-button">&times;</button>
-         </div>
-         <div class="modal-body">
-            <ul>
-               <li>
-                  Background music 
-                  <audio id="myAudio" src="sound/bgm.mp3" type="audio/mp3" preload="auto"></audio>
-                  <button><a onClick="togglePlay()">Click to turn on and off</a></button>
-               </li>
-               <ul>
-                  <li>Sound effects
-                  <li>
-                     <hr>
-                     <input type="radio" id="fx-on" name="fx">
-                     <label for="fx-on">Sound effects on</label><br>
-                     <input type="radio" id="fx-off" name="fx">
-                     <label for="fx-off">Sound effects off</label><br>
-                     <input type="radio" id="comp-fx" name="fx">
-                     <label for="comp-fx">Game completion only</label> 
-               </ul>
-            </ul>
-         </div>
+      <div class="modal-body">
+        <p>The player chooses a card. The player then selects another card. If the two cards are a matching pair, then they stay flipped. The player is awarded another turn for making a match and goes again.</p>
       </div>
-      <div id="overlay"></div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+<!-- Modal -->
+<div id="myModal1" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Settings</h4>
+      </div>
+      <div class="modal-body">
+        <label>BGM</label>
+        <label class="switch"><input type="checkbox" id="togBtn"><div class="slider round"></div></label>
+        <hr>
+        <label>SFX</label>
+        <label class="switch"><input type="checkbox" id="togBtn"><div class="slider round"></div></label>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- Modal -->
+<div id="myModal3" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Congratulations!</h4>
+      </div>
+      <div class="modal-body">
+        <p>Do you want to replay?</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Replay</button>
+      </div>
+    </div>
+
+  </div>
+</div>
       <div class="game">
          <div class="card" data-dog="1">
             <img class="front-face" src="images/beagle.png" alt="Beagle">
