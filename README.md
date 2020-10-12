@@ -17,20 +17,21 @@ In particular, as part of this section we recommend that you provide a list of U
 
 This section is also where you would share links to any wireframes, mockups, diagrams etc. that you created as part of the design process. These files should themselves either be included as a pdf file in the project itself (in an separate directory), or just hosted elsewhere online and can be in any format that is viewable inside the browser.
 
-- [Wireframes](https://github.com/Flukester2/Memory-Game/tree/master/images/wireframes)
+- [Wireframes](https://github.com/Flukester2/Memory-Game/tree/master/assets/images/wireframes)
 ## Features
 
 In this section, you should go over the different parts of your project, and describe each in a sentence or so.
  
 ### Existing Features
 - Feature 1 - allows users X to achieve Y, by having them fill out Z
-- the memory card game - allows the user to pick cards, by clicking on them, then they turn over and automatica
+- the memory card game - allows the user to pick cards, by clicking on them, then they turn over and it automaticallly matches the cards and checks if they stay turned or flip back around.
 For some/all of your features, you may choose to reference the specific project files that implement them, although this is entirely optional.
 
 In addition, you may also use this section to discuss plans for additional features to be implemented in the future:
 
 ### Features Left to Implement
-- Another feature idea
+- Toggle function for sound effects
+- Game completion modal
 
 ## Technologies Used
 
@@ -38,13 +39,14 @@ In this section, you should mention all of the languages, frameworks, libraries,
 
 - [HTML](https://html.com)
     - The project uses **HTML** as the code that structures the web page and its content.
-- [CSS](https://css-tricks.com)
+- [CSS](https://www.css-tricks.com)
     - The project uses **CSS** to style the website.
 - [Javascript](https://www.javascript.com)
     - The project uses **Javascript** as the code that creates functionality and makes the website more responsive.
 - [Google_Fonts](https://fonts.google.com)
     - the project uses **Google_Fonts** as an interactive web directory for browsing the library, and APIs for conveniently using the fonts via CSS and Android.
-
+- [Boostrap](https://www.getbootstrap.com)
+    - The project uses **Boostrap** to style the website.
 
 ## Testing
 
@@ -54,11 +56,25 @@ Whenever it is feasible, prefer to automate your tests, and if you've done so, p
 
 For any scenarios that have not been automated, test the user stories manually and provide as much detail as is relevant. A particularly useful form for describing your testing process is via scenarios, such as:
 
-1. Contact form:
-    1. Go to the "Contact Us" page
-    2. Try to submit the empty form and verify that an error message about the required fields appears
+1. Modals:
+    1. Click on the settings or how to play button
+    2. Try closing the form using the close button
     3. Try to submit the form with an invalid email address and verify that a relevant error message appears
     4. Try to submit the form with all inputs valid and verify that a success message appears.
+
+
+2. Audio toggle:
+    1. Click on the settings button, a modal will pop up
+    2. Try to click on the BGM button and the music will start and click the button again will start the music
+
+
+3. Game:
+    1. Select a card
+    2. The card will turn over and stay on until another card is selected
+    3. Selec a secopnd card and the game will automatically match the cards and keep them flipped 
+    4. If the wrong cards are picked then the game automatically turns both cards around withing a set time
+    5. Once all cards are turned and matched the game will reset and the end game modal will pop up
+
 
 In addition, you should mention in this section how your project looks and works on different browsers and screen sizes.
 
