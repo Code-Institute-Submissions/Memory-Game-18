@@ -50,6 +50,7 @@ function unflipCards() {
 function resetBoard() {
     [hasFlippedCard, lockBoard] = [false, false];
     [firstCard, secondCard] = [null, null];
+    
 }
 // This is a shuffle function used to mix cards positions using the math function which returns the largest integer less than or equal to a given number
 (function shuffle() {

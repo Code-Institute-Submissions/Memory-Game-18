@@ -6,10 +6,11 @@
       <link rel="stylesheet" href="style.css">
       <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
    </head>
    <body>
    <div class="row">
-      <div class="col d-none d-sm-block">
+      <div class="col d-none d-ms-block">
       </div>
       <div class="col">
          <h1 id="logo">Memory Game</h1>
@@ -50,7 +51,9 @@
       </div>
       <div class="modal-body">
         <label>BGM</label>
-        <label class="switch"><input type="checkbox" id="togBtn"><div class="slider round"></div></label>
+        <audio id="myAudio" src="http://www.sousound.com/music/healing/healing_01.mp3" preload="auto">
+</audio>
+        <label class="switch"><input onClick="togglePlay()" type="checkbox" id="togBtn"><div class="slider round"></div></label>
         <hr>
         <label>SFX</label>
         <label class="switch"><input type="checkbox" id="togBtn"><div class="slider round"></div></label>
@@ -82,88 +85,109 @@
 
   </div>
 </div>
+<div class="container row">
+
       <div class="game">
          <div class="card" data-dog="1">
-            <img class="front-face" src="images/beagle.png" alt="Beagle">
-            <img class="back-face" src="images/question mark.png" alt="Question mark">
-         </div>
-         <div class="card" data-dog="1">
-            <img class="front-face" src="images/beagle.png" alt="Beagle">
-            <img class="back-face" src="images/question mark.png" alt="Question mark">
-         </div>
-         <div class="card" data-dog="2">
-            <img class="front-face" src="images/dalmation.png" alt="Dalmation">
-            <img class="back-face" src="images/question mark.png" alt="Question mark">
-         </div>
-         <div class="card" data-dog="2">
-            <img class="front-face" src="images/dalmation.png" alt="Dalmation">
-            <img class="back-face" src="images/question mark.png" alt="Question mark">
-         </div>
-         <div class="card" data-dog="3">
-            <img class="front-face" src="images/chocolate-dog.png" alt="Brown patchy dog">
-            <img class="back-face" src="images/question mark.png" alt="Question mark">
-         </div>
-         <div class="card"  data-dog="3">
-            <img class="front-face" src="images/chocolate-dog.png" alt="Brown patchy dog">
-            <img class="back-face" src="images/question mark.png" alt="Question mark">
-         </div>
-         <div class="card"  data-dog="4">
-            <img class="front-face" src="images/dog-with-bow.png" alt="Dog with bow">
-            <img class="back-face" src="images/question mark.png" alt="Question mark">
-         </div>
-         <div class="card"  data-dog="4">
-            <img class="front-face" src="images/dog-with-bow.png" alt="Dog with bow">
-            <img class="back-face" src="images/question mark.png" alt="Question mark">
-         </div>
-         <div class="card" data-dog="5">
-            <img class="front-face" src="images/dog-with-bushy-eyebrows.png" alt="Dog with bushy eyebrows">
-            <img class="back-face" src="images/question mark.png" alt="Question mark">
-         </div>
-         <div class="card" data-dog="5">
-            <img class="front-face" src="images/dog-with-bushy-eyebrows.png" alt="Dog with bushy eyebrows">
-            <img class="back-face" src="images/question mark.png" alt="Question mark">
-         </div>
-         <div class="card"  data-dog="6">
-            <img class="front-face" src="images/dog-with-ginger-beard.png" alt="Dog with ginger beard">
-            <img class="back-face" src="images/question mark.png" alt="Question mark">
-         </div>
-         <div class="card" data-dog="6">
-            <img class="front-face" src="images/dog-with-ginger-beard.png" alt="Dog with ginger beard">
-            <img class="back-face" src="images/question mark.png" alt="Question mark">
-         </div>
-         <div class="card" data-dog="7">
-            <img class="front-face" src="images/happy-dog-with-pointy-ears.png" alt="Happy dog with pointy ears">
-            <img class="back-face" src="images/question mark.png" alt="Question mark">
-         </div>
-         <div class="card" data-dog="7">
-            <img class="front-face" src="images/happy-dog-with-pointy-ears.png" alt="Happy dog with pointy ears">
-            <img class="back-face" src="images/question mark.png" alt="Question mark">
-         </div>
-         <div class="card" data-dog="8">
-            <img class="front-face" src="images/happy-patchy-dog.png" alt="Happy patchy fog">
-            <img class="back-face" src="images/question mark.png" alt="Question mark">
-         </div>
-         <div class="card" data-dog="8">
-            <img class="front-face" src="images/happy-patchy-dog.png" alt="Happy patchy fog">
-            <img class="back-face" src="images/question mark.png" alt="Question mark">
-         </div>
-         <div class="card" data-dog="9">
-            <img class="front-face" src="images/happy-scruffy-dog.png" alt="Happy scruffy dog">
-            <img class="back-face" src="images/question mark.png" alt="Question mark">
-         </div>
-         <div class="card" data-dog="9">
-            <img class="front-face" src="images/happy-scruffy-dog.png" alt="Happy scruffy dog">
-            <img class="back-face" src="images/question mark.png" alt="Question mark">
-         </div>
-         <div class="card" data-dog="10">
-            <img class="front-face" src="images/husky.png" alt="husky">
-            <img class="back-face" src="images/question mark.png" alt="Question mark">
-         </div>
-         <div class="card" data-dog="10">
-            <img class="front-face" src="images/husky.png" alt="husky">
-            <img class="back-face" src="images/question mark.png" alt="Question mark">
-         </div>
+            <img class="front-face" src="images/svg/dice-1-fill.svg" alt="Dice">
+            <img class="back-face" src="images/svg/question.svg" alt="Question mark">
+        </div>
+        <div class="card" data-dog="1">
+            <img class="front-face" src="images/svg/dice-1-fill.svg" alt="Dice">
+            <img class="back-face" src="images/svg/question.svg" alt="Question mark">
+        </div>
       </div>
+
+         <div class="card" data-dog="2">
+            <img class="front-face" src="images/svg/dice-1.svg" alt="Dice">
+            <img class="back-face" src="images/svg/question.svg" alt="Question mark">
+        </div>
+        <div class="card" data-dog="2">
+            <img class="front-face" src="images/svg/dice-1.svg" alt="Dice">
+            <img class="back-face" src="images/svg/question.svg" alt="Question mark">
+        </div>
+      </div>
+
+         <div class="card" data-dog="3">
+            <img class="front-face" src="images/svg/dice-2-fill.svg" alt="Dice">
+            <img class="back-face" src="images/svg/question.svg" alt="Question mark">
+        </div>
+        <div class="card" data-dog="3">
+            <img class="front-face" src="images/svg/dice-2-fill.svg" alt="Dice">
+            <img class="back-face" src="images/svg/question.svg" alt="Question mark">
+        </div>
+      </div>
+ 
+         <div class="card" data-dog="4">
+            <img class="front-face" src="images/svg/dice-2.svg" alt="Dice">
+            <img class="back-face" src="images/svg/question.svg" alt="Question mark">
+        </div>
+        <div class="card" data-dog="4">
+            <img class="front-face" src="images/svg/dice-2.svg" alt="Dice">
+            <img class="back-face" src="images/svg/question.svg" alt="Question mark">
+        </div>
+      </div>
+ 
+         <div class="card" data-dog="5">
+            <img class="front-face" src="images/svg/dice-3-fill.svg" alt="Dice">
+            <img class="back-face" src="images/svg/question.svg" alt="Question mark">
+        </div>
+        <div class="card" data-dog="5">
+            <img class="front-face" src="images/svg/dice-3-fill.svg" alt="Dice">
+            <img class="back-face" src="images/svg/question.svg" alt="Question mark">
+        </div>
+      </div>
+
+         <div class="card" data-dog="6">
+            <img class="front-face" src="images/svg/dice-3.svg" alt="Dice">
+            <img class="back-face" src="images/svg/question.svg" alt="Question mark">
+        </div>
+        <div class="card" data-dog="6">
+            <img class="front-face" src="images/svg/dice-3.svg" alt="Dice">
+            <img class="back-face" src="images/svg/question.svg" alt="Question mark">
+        </div>
+      </div>
+
+         <div class="card" data-dog="7">
+            <img class="front-face" src="images/svg/dice-4-fill.svg" alt="Dice">
+            <img class="back-face" src="images/svg/question.svg" alt="Question mark">
+        </div>
+        <div class="card" data-dog="7">
+            <img class="front-face" src="images/svg/dice-4-fill.svg" alt="Dice">
+            <img class="back-face" src="images/svg/question.svg" alt="Question mark">
+        </div>
+      </div>
+
+         <div class="card" data-dog="8">
+            <img class="front-face" src="images/svg/dice-5.svg" alt="Dice">
+            <img class="back-face" src="images/svg/question.svg" alt="Question mark">
+        </div>
+        <div class="card" data-dog="8">
+            <img class="front-face" src="images/svg/dice-5.svg" alt="Dice">
+            <img class="back-face" src="images/svg/question.svg" alt="Question mark">
+        </div>
+      </div>
+
+         <div class="card" data-dog="9">
+            <img class="front-face" src="images/svg/dice-5-fill.svg" alt="Dice">
+            <img class="back-face" src="images/svg/question.svg" alt="Question mark">
+        </div>
+        <div class="card" data-dog="9">
+            <img class="front-face" src="images/svg/dice-5-fill.svg" alt="Dice">
+            <img class="back-face" src="images/svg/question.svg" alt="Question mark">
+        </div>
+      </div>
+
+         <div class="card" data-dog="10">
+            <img class="front-face" src="images/svg/dice-6-fill.svg" alt="Dice">
+            <img class="back-face" src="images/svg/question.svg" alt="Question mark">
+        </div>
+        <div class="card" data-dog="10">
+            <img class="front-face" src="images/svg/dice-6-fill.svg" alt="Dice">
+            <img class="back-face" src="images/svg/question.svg" alt="Question mark">
+        </div>
+      </div>
+</div>
       <script src="app.js"></script>
       <!-- Optional JavaScript -->
       <!-- jQuery first, then Popper.js, then Bootstrap JS -->

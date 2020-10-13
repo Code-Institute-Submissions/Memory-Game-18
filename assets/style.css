@@ -14,8 +14,8 @@ body {
 /*Game styling*/
 
 .game {
-	width: 640px;
-	height: 500px;
+	width: 40rem;
+	height: 32rem;
 	margin: auto;
 	display: flex;
 	flex-wrap: wrap;
@@ -23,8 +23,8 @@ body {
 }
 
 .card {
-	width: calc(20% - 10px);
-	height: calc(30% - 10px);
+	width: calc(20% - 0.625rem);
+	height: calc(20% - 0.625rem);
 	margin: 5px;
 	position: relative;
 	transform: scale(1);
