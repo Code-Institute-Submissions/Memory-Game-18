@@ -9,13 +9,14 @@
    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
    </head>
    <body>
+   <div id="bg"></div>
    <div class="row">
-      <div class="col d-none d-ms-block">
+      <div class="col d-none d-md-block">
       </div>
       <div class="col">
          <h1 id="logo">Memory Game</h1>
          </div>
-         <div class="col">
+         <div id="menuButtons" class="col">
             <!-- Trigger the modal with a button -->
                <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">How to play</button>
                <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal1">Settings</button>
@@ -50,13 +51,18 @@
         <h4 class="modal-title">Settings</h4>
       </div>
       <div class="modal-body">
+        <div id="modalContent" >
         <label>BGM</label>
-        <audio id="myAudio" src="http://www.sousound.com/music/healing/healing_01.mp3" preload="auto">
+        <audio loop id="myAudio" src="http://www.sousound.com/music/healing/healing_01.mp3" preload="auto">
 </audio>
+<button id="loopBtn" onclick="enableLoop()" type="button">Enable loop</button>
+<button id="loopBtn" onclick="disableLoop()" type="button">Disable loop</button>
+<button id="loopBtn" onclick="checkLoop()" type="button">Check loop status</button>
         <label class="switch"><input onClick="togglePlay()" type="checkbox" id="togBtn"><div class="slider round"></div></label>
         <hr>
         <label>SFX</label>
         <label class="switch"><input type="checkbox" id="togBtn"><div class="slider round"></div></label>
+        </div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
