@@ -18,12 +18,12 @@
          </div>
          <div id="menuButtons" class="col">
             <!-- Trigger the modal with a button -->
-               <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">How to play</button>
-               <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal1">Settings</button>
+               <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#howToModal">How to play</button>
+               <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#settingsModal">Settings</button>
          </div>
    </div>
 <!-- Modal -->
-<div id="myModal" class="modal fade" role="dialog">
+<div id="howToModal" class="modal fade" role="dialog">
   <div class="modal-dialog">
 
     <!-- Modal content-->
@@ -42,7 +42,7 @@
   </div>
 </div>
 <!-- Modal -->
-<div id="myModal1" class="modal fade" role="dialog">
+<div id="settingsModal" class="modal fade" role="dialog">
   <div class="modal-dialog">
 
     <!-- Modal content-->
@@ -52,16 +52,16 @@
       </div>
       <div class="modal-body">
         <div id="modalContent" >
+        <div>
         <label>BGM</label>
-        <audio loop id="myAudio" src="http://www.sousound.com/music/healing/healing_01.mp3" preload="auto">
-</audio>
-<button id="loopBtn" onclick="enableLoop()" type="button">Enable loop</button>
-<button id="loopBtn" onclick="disableLoop()" type="button">Disable loop</button>
-<button id="loopBtn" onclick="checkLoop()" type="button">Check loop status</button>
+        <audio loop id="myAudio" src="http://www.sousound.com/music/healing/healing_01.mp3" preload="auto"></audio>
         <label class="switch"><input onClick="togglePlay()" type="checkbox" id="togBtn"><div class="slider round"></div></label>
+        </div>
         <hr>
+        <div>
         <label>SFX</label>
         <label class="switch"><input type="checkbox" id="togBtn"><div class="slider round"></div></label>
+        </div>
         </div>
       </div>
       <div class="modal-footer">
@@ -73,7 +73,7 @@
 </div>
 
 <!-- Modal -->
-<div id="myModal3" class="modal fade" role="dialog">
+<div id="endGameModal" class="modal fade" role="dialog">
   <div class="modal-dialog">
 
     <!-- Modal content-->
@@ -91,8 +91,7 @@
 
   </div>
 </div>
-<div class="container row">
-
+<div id="gameContainer">
       <div class="game">
          <div class="card" data-dice="1">
             <img class="front-face" src="assets/images/svg/dice-1-fill.svg" alt="Dice">
