@@ -26,7 +26,7 @@ function flipCard() {
 }
 // checking for a mtach
 function checkForMatch() {
-    let isMatch = firstCard.dataset.dog === secondCard.dataset.dog;
+    let isMatch = firstCard.dataset.dice === secondCard.dataset.dice;
     isMatch ? disableCards() : unflipCards();
 }
 // Once the cards have been mtached this function is fired
