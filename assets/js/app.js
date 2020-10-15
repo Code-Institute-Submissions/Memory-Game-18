@@ -4,6 +4,13 @@ const cards = document.querySelectorAll('.card');
 let hasFlippedCard = false;
 let lockBoard = false;
 let firstCard, secondCard;
+
+// End game modal function
+function endGameModal() {
+    $('#endGameModal').modal("show");
+
+}
+
 // This function is to flip cards and then call check for match function after 2 click
 function flipCard() {
     if (lockBoard) return;
@@ -24,7 +31,7 @@ function flipCard() {
 
     checkForMatch();
 }
-// checking for a mtach
+// checking for a match
 function checkForMatch() {
     let isMatch = firstCard.dataset.dice === secondCard.dataset.dice;
     isMatch ? disableCards() : unflipCards();
@@ -51,6 +58,7 @@ function resetBoard() {
     [hasFlippedCard, lockBoard] = [false, false];
     [firstCard, secondCard] = [null, null];
     
+    endGameModal();
 }
 // This is a shuffle function used to mix cards positions using the math function which returns the largest integer less than or equal to a given number
 (function shuffle() {
@@ -77,23 +85,4 @@ myAudio.onplaying = function() {
 myAudio.onpause = function() {
     isPlaying = false;
 };
-
-//Loop function
-
-var x = document.getElementById("myAudio");
-
-function enableLoop() { 
-  x.loop = true;
-  x.load();
-} 
-
-function disableLoop() { 
-  x.loop = false;
-  x.load();
-} 
-
-function checkLoop() { 
-  alert(x.loop);
-} 
-/*Modal function*/
 
