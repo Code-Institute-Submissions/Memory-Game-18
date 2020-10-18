@@ -89,6 +89,7 @@ cards.forEach(card => card.addEventListener('click', flipCard));
 
 var myAudio = document.getElementById("myAudio");
 var isPlaying = false;
+myAudio.volume = 0.2;
 
 function togglePlay() {
     isPlaying ? myAudio.pause() : myAudio.play();
