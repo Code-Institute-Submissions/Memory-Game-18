@@ -9,24 +9,20 @@
 body, html {
   height: 100%;
 }
+/* Modal content alignment */
 
-.bg { 
-  /* The image used */
- background-image: url("images/svg/Tortoise-Shell.svg");
+#modalContent label {
+    padding: 20px;
 
-  /* Full height */
-  height: 100%; 
-
-  /* Center and scale the image nicely */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 /*Game styling*/
 #gameContainer {
     display: flex;
     flex-wrap: wrap;
+    background-image: url("../images/svg/bg-dice.svg");
+    background-position: center; 
+    background-repeat: no-repeat;
 }
 
 .game {
@@ -47,7 +43,8 @@ body, html {
 	transform-style: preserve-3d;
 	transition: transform .5s;
 	box-shadow: 1px 1px 1px rgba(0, 0, 0, .3);
-    overflow: hidden;
+    align-content: center;
+
 }
 
 .card:active {
@@ -61,9 +58,8 @@ body, html {
 
 .front-face,
 .back-face {
-	width: 100px;
-	height: 100px;
-	padding: 10px;
+	width: 90px;
+	height: 75px;
 	position: absolute;
 	border-radius: 5px;
 	background: white;
@@ -163,7 +159,7 @@ input:checked + .slider:after
 
 /* Navigation styling */
 .nav {
-  background-color: #808080;
+  background-color: black;
   overflow: hidden;
 }
 

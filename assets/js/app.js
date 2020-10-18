@@ -23,10 +23,6 @@ function endGameModal() {
 
 }
 
-// Sound effects played when match
-
-
-
 // This function is to flip cards and then call check for match function after 2 click
 function flipCard() {
     if (lockBoard) return;
@@ -35,14 +31,14 @@ function flipCard() {
     this.classList.add('flip');
 
     if (!hasFlippedCard) {
-        // click 1 when the player selects the card the flip card function fires
+// click 1 when the player selects the card the flip card function fires
         hasFlippedCard = true;
         firstCard = this;
 
         return;
     }
 
-    // click 2 sets the second card as this
+// click 2 sets the second card as this
     secondCard = this;
 
     checkForMatch();
@@ -56,7 +52,6 @@ function checkForMatch() {
 function disableCards() {
     firstCard.removeEventListener('click', flipCard);
     secondCard.removeEventListener('click', flipCard);
-
     resetBoard();
 }
 // This function only fires if the cards don't match
@@ -65,7 +60,7 @@ function unflipCards() {
     setTimeout(() => {
         firstCard.classList.remove('flip');
         secondCard.classList.remove('flip');
-// There is a 1500 secobnd delay to see flipping animation
+// There is a 1500 second delay to see flipping animation
         resetBoard();
     }, 1500);
 }
