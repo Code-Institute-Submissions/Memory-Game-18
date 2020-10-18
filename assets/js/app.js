@@ -23,6 +23,10 @@ function endGameModal() {
 
 }
 
+// Sound effects played when match
+
+
+
 // This function is to flip cards and then call check for match function after 2 click
 function flipCard() {
     if (lockBoard) return;
@@ -70,7 +74,6 @@ function resetBoard() {
     [hasFlippedCard, lockBoard] = [false, false];
     [firstCard, secondCard] = [null, null];
     
-    endGameModal();
 }
 // This is a shuffle function used to mix cards positions using the math function which returns the largest integer less than or equal to a given number
 (function shuffle() {
