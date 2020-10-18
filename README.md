@@ -1,9 +1,9 @@
 # Memory-Game
 Second Milestone Project
 
-One or two paragraphs providing an overview of your project.
 
-Essentially, this part is your sales pitch.
+This project has beento show my skills and what I have learned in Code Institute from the JavaScript Fundamentals and Interactive Frontend Development moduals. This project consist of javascript for the functionality of the game and I have used html, boostrap, css and external liberaires to structure and design this website.
+
  
 ## UX
  
@@ -13,7 +13,7 @@ My website is for casual gamers who are looking for a light game to play whilst 
 
 In particular, as part of this section we recommend that you provide a list of User Stories, with the following general structure:
 - As a user type, I want to perform an action, so that I can achieve a goal.
-- As a casual game I want to relax and enjoy a game with sound and visual effects that I have the option to control.
+- As a casual gamer, I want to play a game with little effort from my side, so that i can relax and take my mind of things
 
 This section is also where you would share links to any wireframes, mockups, diagrams etc. that you created as part of the design process. These files should themselves either be included as a pdf file in the project itself (in an separate directory), or just hosted elsewhere online and can be in any format that is viewable inside the browser.
 
@@ -97,11 +97,13 @@ In addition, if it is not obvious, you should also describe how to run your code
 ## Credits
 
 ### Content
-- The text for section Y was copied from the [Wikipedia article Z](https://en.wikipedia.org/wiki/Z)
+Content is all created by me for thsi project.
 
 ### Media
-- The photos used in this site were obtained from ...
+- The photos used in this site were obtained from:
+ - https://icons.getbootstrap.com/
 
 ### Acknowledgements
 
-- I received inspiration for this project from X
+- I received inspiration for this project from :
+  - https://scotch.io/tutorials/how-to-build-a-memory-matching-game-in-javascript
