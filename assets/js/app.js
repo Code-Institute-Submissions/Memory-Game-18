@@ -1,5 +1,5 @@
 
-/* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+// Toggle between adding and removing the responsive class to topnav when the icon is clicked
 function myFunction() {
   var nav = document.getElementById("myNav");
   if (nav.className === "nav") {
@@ -60,9 +60,9 @@ function unflipCards() {
     setTimeout(() => {
         firstCard.classList.remove('flip');
         secondCard.classList.remove('flip');
-// There is a 1500 second delay to see flipping animation
+// There is a 60 second delay to see flipping animation
         resetBoard();
-    }, 1500);
+    }, 60);
 }
 
 function resetBoard() {
